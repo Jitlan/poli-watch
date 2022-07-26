@@ -72,7 +72,6 @@
             },
             "development": {
               "browserTarget": "poli-watch:build:development",
-              "proxyConfig": "./proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
