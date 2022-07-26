@@ -1,5 +1,7 @@
 # PoliWatch
 
+This project is meant to help people be more informed on the way congress votes on bills.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.1.
 
 ## Development server

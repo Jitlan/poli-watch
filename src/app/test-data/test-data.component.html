@@ -1,0 +1,6 @@
+<div *ngFor="let collection of data.collections">
+    <a [routerLink]="['/data-item', collection.collectionCode]">
+        {{collection.collectionName}}
+    </a>
+</div>
+<!-- <p>{{data}}</p> -->
