@@ -8,7 +8,7 @@ import { BillDetail } from 'src/models/bill-detail.model';
 @Injectable()
 export class GovInfoService {
     constructor(private http: HttpClient) { }
-    govInfoApi = 'http://localhost:5000/api/v1/';
+    govInfoApi = 'http://localhost:5000/api/v1/govinfo/';
     startDate = '2018-01-28T20:18:10Z';
 
     getCollections(): Observable<{}>{

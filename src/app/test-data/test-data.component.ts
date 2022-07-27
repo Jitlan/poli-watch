@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GovInfoService } from '../services/gov-info.services';
+import { GovInfoService } from '../../services/gov-info.service';
 
 @Component({
   selector: 'app-test-data',

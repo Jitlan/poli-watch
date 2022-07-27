@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BillDetail } from 'src/models/bill-detail.model';
-import { GovInfoService } from '../services/gov-info.services';
+import { GovInfoService } from '../../services/gov-info.service';
 
 @Component({
   selector: 'app-bill-detail',

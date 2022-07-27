@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { GovInfoService } from '../services/gov-info.services';
+import { GovInfoService } from '../../services/gov-info.service';
 
 @Component({
   selector: 'app-data-item',
