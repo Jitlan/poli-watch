@@ -5,14 +5,16 @@ import { BillDetailComponent } from './bill-detail/bill-detail.component';
 import { TestDataComponent } from './test-data/test-data.component';
 import { HomeComponent } from './home/home.component';
 import { MembersComponent } from './members/members.component';
+import { MemberDetailComponent } from './member-detail/member-detail.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomeComponent },
   { path: 'test-data', component: TestDataComponent },
-  { path: 'data-item/:code', component: DataItemComponent},
-  { path: 'bill-detail/:packageId', component: BillDetailComponent},
-  { path: 'members/:chamber', component: MembersComponent},
+  { path: 'data-item/:code', component: DataItemComponent },
+  { path: 'bill-detail/:packageId', component: BillDetailComponent },
+  { path: 'members/:chamber', component: MembersComponent },
+  { path: 'member-detail/:chamber/:memberId', component: MemberDetailComponent },
 ];
 
 @NgModule({

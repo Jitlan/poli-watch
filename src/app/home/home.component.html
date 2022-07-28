@@ -1,5 +1,25 @@
-<h1>Poli-Watch</h1>
-<a [routerLink]="['/members', 'house']">house members</a>
-<br>
-<a [routerLink]="['/members', 'senate']">senate members</a>
-
+<div class="container">
+    <div class="abs-center">
+        <div class="row justify-content-center">
+            <div class="col-12 offset-1">
+                <h1 id="app-title">Poli-Watch</h1>
+                <p>Click to see member from the selected chamber</p>
+            </div>
+            
+        </div>
+        <div class="row justify-content-center">
+            <div class="shadow card col-md-5 " [routerLink]="['/members', 'house']">
+                <img src="../../assets/Seal_of_the_United_States_House_of_Representatives.svg.png">
+                <div class="card-body">
+                    <p>House Members</p>
+                </div>
+            </div>
+            <div class="shadow card col-md-5 offset-1" [routerLink]="['/members', 'senate']">
+                <img src="../../assets/1280px-Seal_of_the_United_States_Senate.svg.png">
+                <div class="card-body">
+                    <p>Senate Members</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

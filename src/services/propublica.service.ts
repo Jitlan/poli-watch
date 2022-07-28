@@ -13,7 +13,7 @@ export class PropublicaService {
     getMembers(chamber: string): Observable<{}>{
         return this.http.get<{}>(`${this.propublicaApi}/congress/${chamber}`);
     }
-
+    //{type} can only be: introduced, updated, active, passed, enacted, or vetoed
     getMemberBills(memberId: string, type: string): Observable<{}>{
         return this.http.get<{}>(`${this.propublicaApi}/bills/${memberId}/${type}`);
     }

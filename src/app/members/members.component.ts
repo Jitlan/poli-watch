@@ -9,12 +9,15 @@ import { PropublicaService } from '../../services/propublica.service';
   styleUrls: ['./members.component.css']
 })
 export class MembersComponent implements OnInit {
+  chamber: any = "";
+  pageHeader: any = "";
+  members: any = [];
 
   constructor(public restAPI: PropublicaService, private _Activatedroute:ActivatedRoute) { }
-  chamber: any = "";
-  members: any = [];
+
   ngOnInit(): void {
     this.chamber = this._Activatedroute.snapshot.paramMap.get("chamber");
+    this.pageHeader = this.chamber == 'house'? 'House' : 'Senate';
     this.loadMembers();
   }
   loadMembers(){
@@ -24,4 +27,5 @@ export class MembersComponent implements OnInit {
         this.members = d.members;
       })
   }
+
 }

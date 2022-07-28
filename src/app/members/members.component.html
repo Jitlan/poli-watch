@@ -1,4 +1,35 @@
-<h2>Members of the {{chamber}}</h2>
-<div *ngFor="let member of members">
-    <p>{{member.first_name}} {{member.last_name}} | {{member.state}}; District: {{member.district}}</p>
+<!-- <div class="row-container">
+    <div id="members-container">
+        <div *ngFor="let member of members">
+            <div class="small-card">
+                <p *ngIf="member.district; else housetext">{{member.first_name}} {{member.last_name}} | {{member.state}} <br> District: {{member.district}}</p>
+                <ng-template #housetext>{{member.first_name}} {{member.last_name}} | {{member.state}} </ng-template>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="container">
+    <a [routerLink]="['/']">Home</a>
+    <h2><u>Members of the {{pageHeader}}</u></h2>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Party</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">State</th>
+                <th *ngIf="chamber=='house'" scope="col">District</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let member of members" scope="row" [ngClass]="member.party == 'D'? 'table-primary' : 'table-danger' ">
+                <th>{{member.party}}</th>
+                <td>{{member.first_name}}</td>
+                <td>{{member.last_name}}</td>
+                <td>{{member.state}}</td> 
+                <td *ngIf="chamber=='house'">{{member.district}}</td>
+                <td [routerLink]="['/member-detail', chamber, member.id]"><button type="button" class="btn btn-outline-secondary">More</button></td>
+            </tr>
+        </tbody>
+    </table>
 </div>

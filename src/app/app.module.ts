@@ -12,6 +12,7 @@ import { BillDetailComponent } from './bill-detail/bill-detail.component';
 import { HomeComponent } from './home/home.component';
 import { MembersComponent } from './members/members.component';
 import { PropublicaService } from 'src/services/propublica.service';
+import { MemberDetailComponent } from './member-detail/member-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PropublicaService } from 'src/services/propublica.service';
     DataItemComponent,
     BillDetailComponent,
     HomeComponent,
-    MembersComponent
+    MembersComponent,
+    MemberDetailComponent
   ],
   imports: [
     BrowserModule,

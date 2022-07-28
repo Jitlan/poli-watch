@@ -1,0 +1,15 @@
+<div class="container">
+    <a [routerLink]="['/members', chamber]">Members</a>
+    <h2>{{data.name}}</h2>
+    <h6>Sponsored Bills:</h6>
+    <div *ngFor="let bill of data.bills">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">{{bill.short_title}}</h4>
+                <p>IntroducedDate: {{bill.introduced_date}}</p>
+                <p *ngIf="bill.summary; else emptySummary">{{bill.summary}}</p>
+                <ng-template #emptySummary>There is no summary for this bill.</ng-template>
+            </div>
+        </div>
+    </div>
+</div>
