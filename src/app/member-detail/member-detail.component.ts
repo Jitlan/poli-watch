@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Bill } from 'src/models/bill';
 
 import { PropublicaService } from '../../services/propublica.service';
 
@@ -12,7 +13,7 @@ export class MemberDetailComponent implements OnInit {
   chamber: any = "";
   memberId: any = "";
   data: any;
-  bills: any;
+  bills: Bill[] = [];
   constructor(public restAPI: PropublicaService, private _Activatedroute:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -24,8 +25,11 @@ export class MemberDetailComponent implements OnInit {
   memberData(memberId: string){
     return this.restAPI.getMemberBills(this.memberId, 'active')
     .subscribe((d: any) => {
-      console.log(d);
       this.data = d[0];
+      this.data.bills.forEach((bill: Bill)=> {
+        this.bills.push(new Bill(bill)); 
+      });
+      console.log(this.bills);
     });
   }
 }

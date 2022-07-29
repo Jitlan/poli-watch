@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { GovInfoService } from '../services/gov-info.service';
 
@@ -28,6 +29,7 @@ import { MemberDetailComponent } from './member-detail/member-detail.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [GovInfoService, PropublicaService],
   bootstrap: [AppComponent]

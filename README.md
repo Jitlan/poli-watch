@@ -32,5 +32,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Left to do:
 Search bar for members lists
 Caching to eliminate unnecessary api calls
-create classes for members and bills
 *************** | build unit tests | **************
