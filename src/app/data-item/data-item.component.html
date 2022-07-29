@@ -1,7 +1,0 @@
-<a [routerLink]="['/']">Back to Collections</a>
-
-<h1>{{code}}</h1>
-<div *ngFor="let item of collection.packages">
-    <a [routerLink]="['/bill-detail', item.packageId]"><u>{{item.title}}</u> | Date Issued: {{item.dateIssued}}</a>
-    <br>
-</div>

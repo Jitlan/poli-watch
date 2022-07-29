@@ -12,7 +12,7 @@ import { PropublicaService } from '../../services/propublica.service';
 export class MemberDetailComponent implements OnInit {
   chamber: any = "";
   memberId: any = "";
-  data: any;
+  data: any = {};
   bills: Bill[] = [];
   constructor(public restAPI: PropublicaService, private _Activatedroute:ActivatedRoute) { }
 

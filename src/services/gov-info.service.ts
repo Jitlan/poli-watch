@@ -3,9 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { BillDetail } from 'src/models/bill-detail.model';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class GovInfoService {
     constructor(private http: HttpClient) { }
     govInfoApi = 'http://localhost:5000/api/v1/govinfo/';
@@ -19,6 +18,6 @@ export class GovInfoService {
         return this.http.get<{}>(`${this.govInfoApi}collections/${code}/${time}`);
     }
     getBillData(packageId: string): Observable<{}>{
-        return this.http.get<BillDetail>(`${this.govInfoApi}bill/${packageId}`);
+        return this.http.get<{}>(`${this.govInfoApi}bill/${packageId}`);
     }
 }

@@ -1,5 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from "@angular/router/testing";
 
+import { PropublicaService } from 'src/services/propublica.service';
 import { MembersComponent } from './members.component';
 
 describe('MembersComponent', () => {
@@ -8,7 +11,9 @@ describe('MembersComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MembersComponent ]
+      declarations: [ MembersComponent ],
+      imports: [HttpClientModule, RouterTestingModule],
+      providers: [PropublicaService],
     })
     .compileComponents();
   });

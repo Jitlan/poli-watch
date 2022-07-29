@@ -5,7 +5,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, retry, map, shareReplay } from 'rxjs/operators';
 import { Member } from 'src/models/member';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class PropublicaService {
     propublicaApi:string = 'http://localhost:5000/api/v1/propublica';
     cachedMembers$: Observable<Member[]> = new Observable<Member[]>();
