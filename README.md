@@ -30,6 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 Left to do:
-Search bar for members lists
-Caching to eliminate unnecessary api calls
+Search bar for members lists ✅
+Caching to eliminate unnecessary api calls ✅
 *************** | build unit tests | **************

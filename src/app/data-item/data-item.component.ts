@@ -23,7 +23,6 @@ export class DataItemComponent implements OnInit {
   loadCollection(){
     return this.restAPI.getCollectionData(this.code, this.selectedDateTime)
       .subscribe((d:{}) => {
-        console.log(d);
         this.collection = d;
       })
   }

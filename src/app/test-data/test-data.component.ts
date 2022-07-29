@@ -17,7 +17,6 @@ export class TestDataComponent implements OnInit {
   loadData(){
     return this.restAPI.getCollections().subscribe((d: {}) => {
       this.data = d;
-      console.log(d);
     })
   }
 }

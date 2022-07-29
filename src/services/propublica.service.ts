@@ -16,7 +16,6 @@ export class PropublicaService {
     getMembers(chamber: string): Observable<{}>{
         if(!this.cachedMembers$ || this.currentChamber$ != chamber) {
             this.currentChamber$ = chamber;
-            console.log("pew")
             this.cachedMembers$ = this.http.get<Member[]>(`${this.propublicaApi}/congress/${chamber}`);
         }
         return this.cachedMembers$;

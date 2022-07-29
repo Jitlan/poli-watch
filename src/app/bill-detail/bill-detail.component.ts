@@ -15,13 +15,11 @@ export class BillDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.packageId = this._Activatedroute.snapshot.paramMap.get("packageId");
-    console.log(this.packageId);
     this.loadBillData();
   }
   loadBillData(){
     return this.restAPI.getBillData(this.packageId)
       .subscribe((d) => {
-        console.log(d);
         this.details = new BillDetail(d);
       })
   }

@@ -25,7 +25,6 @@ export class MembersComponent implements OnInit {
   loadMembers() {
     return this.restAPI.getMembers(this.chamber)
       .subscribe((d: any) => {
-        console.log(d.members);
         d.members.forEach((member: Member)=> {
           this.members.push(member);
         });

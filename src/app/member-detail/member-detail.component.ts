@@ -29,7 +29,6 @@ export class MemberDetailComponent implements OnInit {
       this.data.bills.forEach((bill: Bill)=> {
         this.bills.push(new Bill(bill)); 
       });
-      console.log(this.bills);
     });
   }
 }
