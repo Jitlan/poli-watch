@@ -45,4 +45,10 @@ export class MembersComponent implements OnInit {
         return true;
 
   }
+  results(){
+    for(let member of this.members){
+      if(this.search(member)) return true;
+    }
+    return false;
+  }
 }
